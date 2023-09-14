@@ -1,8 +1,10 @@
 const question = require('./question')
+const user = require('./user')
 
 
 const mockList = [
-  ...question
+  ...question,
+  ...user
 ]
 
 module.exports = mockList
