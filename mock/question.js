@@ -15,6 +15,36 @@ module.exports = [
         data: {
           id: Random.id(),
           title: Random.ctitle(),
+          componentList: [
+            {
+              id: Random.id(),
+              type: "questionText", //组件类型,不能重复，前后端统一
+              title: "标题", //
+              props: {
+                text: "个人信息调研",
+                level: 1,
+                isCenter: false,
+              },
+            },
+            {
+              id: Random.id(),
+              type: "questionInput", //组件类型,不能重复，前后端统一
+              title: "输入框", //
+              props: {
+                title: "你的姓名",
+                placeholder: "请输入姓名...",
+              },
+            },
+            {
+              id: Random.id(),
+              type: "questionInput", //组件类型,不能重复，前后端统一
+              title: "输入框2", //
+              props: {
+                title: "你的电话",
+                placeholder: "请输入电话...",
+              },
+            },
+          ],
         },
       };
     },
@@ -83,7 +113,7 @@ module.exports = [
     method: "delete",
     response() {
       return {
-        errno: 0
+        errno: 0,
       };
     },
   },
