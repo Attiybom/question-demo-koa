@@ -17,8 +17,8 @@ module.exports = [
           title: Random.ctitle(),
           componentList: [
             {
-              id: Random.id(),
-              type: "questionText", //组件类型,不能重复，前后端统一
+              fe_id: Random.id(),
+              type: "questionTitle", //组件类型,不能重复，前后端统一
               title: "标题", //
               props: {
                 text: "个人信息调研",
@@ -27,7 +27,7 @@ module.exports = [
               },
             },
             {
-              id: Random.id(),
+              fe_id: Random.id(),
               type: "questionInput", //组件类型,不能重复，前后端统一
               title: "输入框", //
               props: {
@@ -36,9 +36,9 @@ module.exports = [
               },
             },
             {
-              id: Random.id(),
+              fe_id: Random.id(),
               type: "questionInput", //组件类型,不能重复，前后端统一
-              title: "输入框2", //
+              title: "输入框2", //这类型组件的默认标题
               props: {
                 title: "你的电话",
                 placeholder: "请输入电话...",
