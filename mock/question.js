@@ -16,6 +16,18 @@ module.exports = [
           id: Random.id(),
           title: Random.ctitle(),
           componentList: [
+            //info
+            {
+              fe_id: Random.id(),
+              type: "questionInfo", //组件类型,不能重复，前后端统一
+              title: "问卷标题", //
+              isHidden: false,
+              isLocked: false,
+              props: {
+                title: "问卷标题",
+                desc: "问卷描述...",
+              },
+            },
             {
               fe_id: Random.id(),
               type: "questionTitle", //组件类型,不能重复，前后端统一
@@ -25,6 +37,18 @@ module.exports = [
               props: {
                 text: "个人信息调研",
                 level: 1,
+                isCenter: false,
+              },
+            },
+            // 段落
+            {
+              fe_id: Random.id(),
+              type: "questionParagraph", //组件类型,不能重复，前后端统一
+              title: "段落", //这类型组件的默认标题
+              isHidden: false, // 控制该组件是否隐藏显示
+              isLocked: false,
+              props: {
+                text: "一行段落",
                 isCenter: false,
               },
             },
@@ -48,6 +72,55 @@ module.exports = [
               props: {
                 title: "你的电话",
                 placeholder: "请输入电话...",
+              },
+            },
+            // textarea
+            {
+              fe_id: Random.id(),
+              type: "questionTextarea", //组件类型,不能重复，前后端统一
+              title: "多行输入框", //这类型组件的默认标题
+              isHidden: false, // 控制该组件是否隐藏显示
+              isLocked: false,
+              props: {
+                title: "你的爱好",
+                placeholder: "请输入...",
+              },
+            },
+            //单选框
+            {
+              fe_id: Random.id(),
+              type: "questionRadio", //组件类型,不能重复，前后端统一
+              title: "单选框", //这类型组件的默认标题
+              isHidden: false, // 控制该组件是否隐藏显示
+              isLocked: false,
+              props: {
+                title: "单选标题",
+                isVertical: false,
+                options: [
+                  // 单选框选项
+                  { value: "item1", text: "选项1" },
+                  { value: "item2", text: "选项2" },
+                  { value: "item3", text: "选项3" },
+                ],
+                value: "", //单选框默认初始选项
+              },
+            },
+            //多选框
+            {
+              fe_id: Random.id(),
+              type: "questionCheckbox", //组件类型,不能重复，前后端统一
+              title: "多选框", //这类型组件的默认标题
+              isHidden: false, // 控制该组件是否隐藏显示
+              isLocked: false,
+              props: {
+                title: "多选标题",
+                isVertical: false,
+                list: [
+                  // 单选框选项
+                  { value: "item1", text: "选项1", checked: false },
+                  { value: "item2", text: "选项2", checked: false },
+                  { value: "item3", text: "选项3", checked: false },
+                ],
               },
             },
           ],
