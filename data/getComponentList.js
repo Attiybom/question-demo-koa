@@ -33,7 +33,7 @@ function getComponentList() {
         isCenter: false,
       },
     },
-
+    //input
     {
       fe_id: `c4`,
       type: "questionInput", //组件类型,不能重复，前后端统一
@@ -76,7 +76,7 @@ function getComponentList() {
       isHidden: false, // 控制该组件是否隐藏显示
       isLocked: false,
       props: {
-        text: "一行段落",
+        text: "一行段落1\n一行段落2",
         isCenter: false,
       },
     },
